@@ -58,15 +58,13 @@ export default class Slider extends Component {
    * Autoplay logic
    */
   intervalBetweenSliders = () => {
-    if (this.state.autoPlay === true) {
-      if (this.state.active === this.state.max - 1) {
-        this.state.active = 0;
+    const { autoPlay, active, max } = this.state;
+    if (autoPlay === true) {
+      if (active + 1 === max) {
+        this.setState({ active: 0 });
       } else {
-        this.state.active++;
+        this.setState(state => ({ active: state.active + 1 }));
       }
-      this.setState({
-        active: this.state.active
-      });
     }
   };
 
