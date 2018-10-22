@@ -1,1 +1,1 @@
-This is intensive course on React in the Academy Layout
+Слайдер, написанный в рамках интенсива по React от Академии Вёрстки. 
